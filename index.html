@@ -1,14 +1,185 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-  <title>Image to PDF</title>
+  <meta charset="UTF-8">
+  <title>Image to PDF Converter</title>
+
+  <!-- Early 2010s style meta -->
+
+  <meta name="viewport" content="width=1024">
+
+  <style>
+    /* ===== Early 2010s Vintage Theme ===== */
+    body {
+      margin: 0;
+      padding: 0;
+      background: #dcdcdc;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      color: #222;
+    }
+
+    .wrapper {
+      width: 960px;
+      margin: 30px auto;
+      background: #ffffff;
+      border: 1px solid #aaa;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    header {
+      background: linear-gradient(#3b6db3, #274b80);
+      color: #fff;
+      padding: 20px;
+      border-bottom: 4px solid #1b355c;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 13px;
+      color: #dbe6ff;
+    }
+
+    nav {
+      background: #f0f0f0;
+      border-bottom: 1px solid #ccc;
+      padding: 8px 15px;
+    }
+
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #0044aa;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      padding: 25px;
+    }
+
+    .content h2 {
+      font-size: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    .converter-box {
+      background: #f7f7f7;
+      border: 1px solid #bbb;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    input[type="file"] {
+      font-size: 13px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 8px 18px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(#5a8dee, #2f64c7);
+      border: 1px solid #244c9c;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: linear-gradient(#6fa0ff, #3b73d8);
+    }
+
+    .note {
+      font-size: 12px;
+      color: #555;
+      margin-top: 15px;
+      background: #ffffe0;
+      border: 1px solid #e6db55;
+      padding: 10px;
+    }
+
+    footer {
+      background: #eeeeee;
+      border-top: 1px solid #ccc;
+      padding: 10px;
+      font-size: 12px;
+      text-align: center;
+      color: #444;
+    }
+
+    footer a {
+      color: #0044aa;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
 </head>
 <body>
 
-<input type="file" id="imageInput" multiple accept="image/png,image/jpeg">
-<button onclick="convertToPDF()">Convert</button>
+  <div class="wrapper">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="script.js"></script>
+```
+<header>
+  <h1>Image to PDF Converter</h1>
+  <p>Simple • Fast • No Uploads Required</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Converter</a>
+  <a href="#">FAQ</a>
+  <a href="#">Contact</a>
+</nav>
+
+<div class="content">
+  <h2>Convert JPG & PNG Images to PDF</h2>
+  <p>
+    This free online tool lets you convert image files into a single PDF document.
+    All processing happens directly in your browser.
+  </p>
+
+  <div class="converter-box">
+    <strong>Select image files:</strong><br><br>
+    <input type="file" id="imageInput" multiple accept="image/png,image/jpeg"><br>
+    <button onclick="convertToPDF()">Convert to PDF</button>
+
+    <div class="note">
+      ✔ Supports JPG and PNG files<br>
+      ✔ Multiple images allowed<br>
+      ✔ No registration required<br>
+      ✔ Your files never leave your computer
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2010–2025 Image to PDF Converter · <a href="#">Privacy Policy</a> · <a href="#">Terms</a>
+</footer>
+```
+
+  </div>
+
+  <!-- jsPDF CDN -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
+
